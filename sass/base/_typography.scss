@@ -1,0 +1,41 @@
+.section__title {
+  color: var(--color-gray);
+  font-family: Gilroy;
+  font-weight: 500;
+  line-height: 150%; /* 27px */
+  text-transform: uppercase;
+}
+
+.section__title_big {
+  color: var(--color-gray);
+  font-family: "Century Gothic";
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.9rem; /* 128.889% */
+  text-transform: uppercase;
+  margin-top: 1rem;
+
+  span {
+    color: var(--color-primary);
+    font-style: italic;
+    font-weight: 700;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .section__title_big {
+    font-family: "Century Gothic";
+    font-size: 1.5rem;
+    line-height: 120%; /* 128.889% */
+  }
+}

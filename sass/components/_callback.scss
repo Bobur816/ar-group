@@ -1,0 +1,97 @@
+.callback__form {
+  color: var(--color-white);
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  h3 {
+    font-family: "Century Gothic";
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 127.7%; /* 22.986px */
+    margin: 1.25rem 0 1.65rem 0;
+  }
+
+  input {
+    display: block;
+    height: 3rem;
+    width: 80%;
+    padding: 0.85rem 1rem;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 3rem;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+
+    &:focus {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      &::placeholder {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #8b8b8b;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 160.2%; /* 25.632px */
+    max-width: 80%;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  &.white {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3,
+    p {
+      color: var(--color-gray);
+    }
+
+    input {
+      background-color: #f5f5f5;
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .callback__form {
+    &.white {
+      h3 {
+        font-size: 1.3rem;
+      }
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    span {
+      max-width: 100%;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

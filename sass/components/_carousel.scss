@@ -1,0 +1,36 @@
+.carousel {
+  &__controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    bottom: 0.5rem;
+    right: 0;
+    z-index: 2;
+
+    button {
+      height: 3rem;
+      width: 3rem;
+      @include center;
+
+      i {
+        font-size: 0.7rem;
+        line-height: 100%;
+      }
+    }
+  }
+
+  // ______________________
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    &__about-us {
+      .carousel__controls {
+        justify-content: center;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

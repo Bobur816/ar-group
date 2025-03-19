@@ -1,0 +1,159 @@
+.cards {
+  margin-top: 2.5rem;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .for__more {
+    display: none;
+  }
+
+  .for__btn {
+    margin-top: 2rem;
+    @include center;
+  }
+}
+
+.about-us-card {
+  height: 17rem;
+  background-color: var(--color-white);
+  @include spaced;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+
+  &__icon {
+    background-color: var(--color-primary);
+    @include center;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    img {
+      height: 50%;
+    }
+  }
+
+  &__info {
+    h4 {
+      color: var(--color-gray);
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    p {
+      color: var(--3, #7d7a7b);
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 150%; /* 30px */
+    }
+  }
+
+  &:hover {
+    height: 23rem;
+  }
+}
+
+.services-card {
+  background-color: var(--color-white);
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  @include spaced;
+  flex-direction: column;
+  height: 32.8rem;
+
+  &__img {
+    border-radius: 1rem;
+    width: 100%;
+    height: 60%;
+
+    img {
+      @include fullImg;
+    }
+  }
+
+  &__info {
+    padding: 1.5rem 0.8rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    p {
+      margin: 0.75rem 0 2rem 0;
+    }
+  }
+}
+
+.projects-card {
+  height: 23rem;
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &:hover & {
+    &__image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    @include absCenter;
+
+    @include fullImg;
+    img {
+      @include fullImg;
+      transition: all 0.3s;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    @include fullImg;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+
+    span {
+      background-color: var(--color-white);
+      padding: 0.25rem 1rem;
+      border-radius: 1rem;
+      color: var(--color-gray);
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 120%; /* 19.2px */
+      @include center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    margin-top: 1.5rem;
+    &__wrapper {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  .about-us-card {
+    &:hover {
+      height: 17rem;
+    }
+  }
+
+  .services-card {
+    height: 30rem;
+
+    &__info {
+      padding: 1rem 0.5rem 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.single {
+  margin-top: 2.5rem;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+  }
+
+  &__img {
+    height: fit-content;
+  }
+
+  &__info {
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      font-weight: 500;
+      line-height: 120%; /* 21.6px */
+      margin-bottom: 0.75rem;
+    }
+
+    .btn {
+      margin-top: 1.5rem;
+      width: 100%;
+      max-width: 20rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .single {
+    &__wrapper {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    &__info {
+      .btn {
+        max-width: 100%;
+      }
+    }
+  }
+}
