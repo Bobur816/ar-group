@@ -1,8 +1,5 @@
 .callback__form {
   color: var(--color-white);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
   h3 {
     font-family: "Century Gothic";
     font-size: 1.5rem;
@@ -11,26 +8,37 @@
   }
 
   p {
+    width: 80%;
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 127.7%; /* 22.986px */
-    margin: 1.25rem 0 1.65rem 0;
+    margin: 1.25rem 0 2rem 0;
   }
 
   input {
     display: block;
     height: 3rem;
-    width: 80%;
-    padding: 0.85rem 1rem;
-    border: 1px solid transparent;
+    width: 100%;
+    padding: 0.85rem 0;
+    border: none;
+    border-bottom: 1px solid #bababa;
     outline: none;
-    border-radius: 3rem;
+    // border-radius: 3rem;
     transition: all 0.3s;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+
+    &::placeholder {
+      transition: all 0.3s;
+    }
 
     &:focus {
       border-color: var(--color-primary);
       color: var(--color-primary);
+
+      input {
+        border-color: var(--color-primary);
+      }
       &::placeholder {
         color: var(--color-primary);
       }
@@ -48,7 +56,7 @@
   }
 
   button {
-    width: 80%;
+    width: 100%;
   }
 
   &.white {

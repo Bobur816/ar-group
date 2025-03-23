@@ -1,159 +1,342 @@
-.cards {
-  margin-top: 2.5rem;
-  &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
-  }
+.card {
+  margin-top: 1rem;
+  height: 20rem;
+  // background-color: red;
 
-  .for__more {
-    display: none;
-  }
+  &:nth-child(2n + 1) {
+    height: 25rem;
+    .card__info {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
 
-  .for__btn {
-    margin-top: 2rem;
-    @include center;
-  }
-}
+      border-right: 0.05rem solid var(--color-gray);
+      border-left: none;
 
-.about-us-card {
-  height: 17rem;
-  background-color: var(--color-white);
-  @include spaced;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  transition: all 0.3s ease;
+      &::before {
+        left: -0.25rem;
+      }
 
-  &__icon {
-    background-color: var(--color-primary);
-    @include center;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-    img {
-      height: 50%;
+      &::after {
+        left: -0.25rem;
+      }
     }
   }
 
   &__info {
-    h4 {
-      color: var(--color-gray);
-      font-size: 1.4rem;
-      font-weight: 500;
-    }
-
-    p {
-      color: var(--3, #7d7a7b);
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 150%; /* 30px */
-    }
-  }
-
-  &:hover {
-    height: 23rem;
-  }
-}
-
-.services-card {
-  background-color: var(--color-white);
-  padding: 0.5rem;
-  border-radius: 1.5rem;
-  @include spaced;
-  flex-direction: column;
-  height: 32.8rem;
-
-  &__img {
-    border-radius: 1rem;
-    width: 100%;
-    height: 60%;
-
-    img {
-      @include fullImg;
-    }
-  }
-
-  &__info {
-    padding: 1.5rem 0.8rem 0.8rem;
-    display: flex;
+    padding: 1.85rem 1.5rem 0.5rem;
+    @include spaced;
     flex-direction: column;
-    justify-content: flex-end;
+    position: relative;
+    border-top: 0.05rem solid var(--color-gray);
+    border-left: 0.05rem solid var(--color-gray);
+    border-bottom: 0.05rem solid var(--color-gray);
 
-    p {
-      margin: 0.75rem 0 2rem 0;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.5rem;
+      width: 0.5rem;
+      background-color: var(--color-primary);
     }
-  }
-}
 
-.projects-card {
-  height: 23rem;
-  border-radius: 1.5rem;
-  position: relative;
-  overflow: hidden;
+    &::before {
+      top: -0.25rem;
+      right: -0.25rem;
+    }
 
-  &:hover & {
-    &__image {
-      img {
-        transform: scale(1.1);
+    &::after {
+      bottom: -0.25rem;
+      right: -0.25rem;
+    }
+
+    &_top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        color: var(--color-primary);
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      p {
+        color: #fff9f2;
+        width: 80%;
+        margin-top: 0.6rem;
+      }
+
+      a {
+        display: inline-block;
+        align-self: first baseline;
+        width: 6rem;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &_bottom {
+      width: 100%;
+      @include spaced;
+
+      &-year {
+        color: var(--color-primary);
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      &-number {
+        color: var(--color-primary);
+        font-family: Guton;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
     }
   }
 
   &__image {
-    position: absolute;
-    @include absCenter;
-
-    @include fullImg;
-    img {
+    & > div {
       @include fullImg;
-      transition: all 0.3s;
     }
+  }
+}
+
+.project-card {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+
+    img {
+      width: fit-content;
+      max-width: 100%;
+      height: fit-content;
+    }
+
+    h3 {
+      color: var(--color-primary);
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+
+    a {
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+
+      img {
+        @include fullImg;
+      }
+    }
+  }
+}
+
+.testimonials__item {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  transition: all 0.3s ease;
+  border-top: 1px solid var(--color-gray);
+  border-right: 1px solid var(--color-gray);
+  border-left: 1px solid var(--color-gray);
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: var(--color-primary);
+  }
+
+  &::before {
+    bottom: -0.25rem;
+    left: -0.25rem;
+  }
+
+  &::after {
+    bottom: -0.25rem;
+    right: -0.25rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6rem; /* 160% */
   }
 
   &__info {
-    position: absolute;
-    @include fullImg;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 1.5rem;
-    display: flex;
-    align-items: flex-end;
-    gap: 0.75rem;
+    @include spaced;
 
-    span {
-      background-color: var(--color-white);
-      padding: 0.25rem 1rem;
-      border-radius: 1rem;
-      color: var(--color-gray);
-      font-size: 0.8rem;
+    img {
+      height: 3rem;
+    }
+
+    &_left {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      h5 {
+        font-weight: 600;
+      }
+    }
+
+    &_right {
+      width: 2.2rem;
+      aspect-ratio: 1/1;
+    }
+
+    &_stars {
+      display: flex;
+      i {
+        color: var(--color-yellow);
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+}
+
+.news-card {
+  width: 21.5rem;
+  height: 70%;
+  &__image {
+    height: 70%;
+  }
+
+  &__info {
+    h4 {
+      font-size: 1rem;
       font-weight: 500;
-      line-height: 120%; /* 19.2px */
-      @include center;
+      line-height: normal;
+      margin: 1rem 0;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #d8cfc1;
+      font-weight: 500;
+      line-height: 150%; /* 27px */
     }
   }
 }
 
 @media (max-width: 768px) {
-  .cards {
-    margin-top: 1.5rem;
-    &__wrapper {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-  }
+  .card {
+    height: fit-content;
 
-  .about-us-card {
-    &:hover {
-      height: 17rem;
-    }
-  }
+    &:nth-child(2n + 1) {
+      height: fit-content;
 
-  .services-card {
-    height: 30rem;
+      .card__info {
+        grid-column: auto;
+        grid-row: auto;
+        border-left: 0.05rem solid var(--color-gray);
+
+        &::before {
+          bottom: -0.25rem;
+          left: auto;
+        }
+
+        &::after {
+          bottom: -0.25rem;
+        }
+      }
+    }
 
     &__info {
-      padding: 1rem 0.5rem 0.5rem;
+      padding: 1rem;
+      height: 15rem;
+      border-top: none;
+      border-right: 0.05rem solid var(--color-gray);
+
+      &::before {
+        top: auto;
+        left: auto;
+        bottom: -0.25rem;
+        right: -0.25rem;
+      }
+
+      &::after {
+        top: auto;
+        right: auto;
+        bottom: -0.25rem;
+        left: -0.25rem;
+      }
+
+      &_top {
+        h3 {
+          font-size: 1.25rem;
+        }
+
+        p {
+          width: 100%;
+        }
+      }
+
+      &_bottom {
+        &-number {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__image {
+      height: 15rem;
+    }
+  }
+
+  .testimonials__item {
+    padding: 1rem;
+    gap: 1.5rem;
+
+    &__text {
+      line-height: 1.4rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .news-card {
+    width: 100%;
+    height: fit-content;
+    &__image {
+      height: 22rem;
+    }
+
+    &__info {
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
     }
   }
 }

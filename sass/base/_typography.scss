@@ -1,41 +1,79 @@
 .section__title {
-  color: var(--color-gray);
-  font-family: Gilroy;
-  font-weight: 500;
-  line-height: 150%; /* 27px */
-  text-transform: uppercase;
-}
-
-.section__title_big {
-  color: var(--color-gray);
-  font-family: "Century Gothic";
-  font-size: 2.25rem;
+  color: var(--color-primary);
+  font-family: Guton;
+  font-size: 5rem;
+  font-style: normal;
   font-weight: 400;
-  line-height: 2.9rem; /* 128.889% */
+  line-height: normal;
   text-transform: uppercase;
-  margin-top: 1rem;
-
-  span {
-    color: var(--color-primary);
-    font-style: italic;
-    font-weight: 700;
-  }
 }
+
+.section__subtitle {
+  color: var(--color-primary);
+  font-family: Guton;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
 .text-center {
   text-align: center;
 }
 
+.big-text {
+  color: var(--color-primary);
+  display: block;
+  font-family: Guton;
+  // font-size: 17rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 2rem;
+  // aspect-ratio: 5/1;
+  width: 100%;
+
+  font-size: clamp(20px, 25vw, 17.3rem);
+}
+
+.big-text_general {
+  color: var(--color-primary);
+  font-family: Guton;
+  font-size: 16rem;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.big-text_single {
+  color: var(--color-primary);
+  font-family: Guton;
+  font-size: 13.5rem;
+  font-weight: 400;
+  line-height: 85.185%; /* 85.185% */
+}
+
 @media (max-width: 768px) {
   .section__title {
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-size: 2.7rem;
   }
 
-  .section__title_big {
-    font-family: "Century Gothic";
-    font-size: 1.5rem;
-    line-height: 120%; /* 128.889% */
+  .section__subtitle {
+    font-size: 2.8rem;
+  }
+
+  .big-text {
+    font-size: clamp(20px, 18vw, 17.3rem);
+  }
+  .big-text_general {
+    font-size: clamp(20px, 18vw, 17.3rem);
+
+    line-height: 150%;
+  }
+
+  .big-text_single {
+    font-size: 4.5rem;
+    line-height: 100%;
   }
 }

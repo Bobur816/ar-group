@@ -1,0 +1,98 @@
+.preloader {
+  position: fixed;
+  height: 100vh;
+  background-color: var(--color-bg);
+  // background-color: var(--color-bg);
+  width: 100vw;
+  z-index: 100;
+  transition: all 0.8s ease;
+
+  &__bg {
+    position: absolute;
+    @include fullImg;
+    z-index: -10;
+    // background-color: red;
+
+    &-shape {
+      @include fullImg;
+    }
+  }
+  &__logo {
+    width: 80%;
+    max-width: 35rem;
+    position: absolute;
+    @include absCenter;
+    z-index: 1;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    animation: bounceIn 2s forwards;
+    animation-delay: 0.5s; /* Kerak bo‘lsa kechikish */
+  }
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    60% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    80% {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &__proggress {
+    background-color: #6a6a6a;
+    width: 80%;
+    height: 2px;
+    @include absCenterX;
+    bottom: 4rem;
+    opacity: 0;
+    animation: show 1s forwards;
+    animation-delay: 2s; /* Kerak bo‘lsa kechikish */
+
+    &-tumb {
+      background-color: blue;
+      position: absolute;
+      transition: all 0.3s ease;
+      // height: 7rem;
+      height: 5rem;
+      top: -5rem;
+      left: 0%;
+
+      img {
+        @include absCenter;
+        height: 100%;
+        // top: ;
+      }
+      h3 {
+        @include absCenterX;
+        top: 25%;
+        color: var(--color-primary);
+        font-family: Guton;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 3rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+}

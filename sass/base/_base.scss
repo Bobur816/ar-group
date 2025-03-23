@@ -122,17 +122,29 @@ body {
   // position: relative;
   scroll-behavior: smooth;
   background-color: var(--color-bg);
-  color: var(--color-gray);
+  // color: var(--color-white);
+  color: #fff9f2;
 }
 
 .container {
   // background-color: rgba(255, 0, 0, 0.514);
   margin: 0 auto;
-  max-width: 84.15rem;
-  // padding: 0 1rem;
+  max-width: 90rem;
+  padding: 0 1rem;
   width: 100%;
 
   @media (max-width: 768px) {
     padding: 0 1rem;
   }
+}
+
+.bg-shape {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
 }

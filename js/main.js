@@ -76,16 +76,118 @@ $(window).on("load", () => {
     }
   });
 
+  function applyMask() {
+    $(".form_tel").inputmask("remove"); // eski maskani o‘chirish
+    $(".form_tel").inputmask({
+      mask: "+\\9\\98 99 999 99 99",
+    });
+  }
+
+  applyMask();
+
+  // ______________________________splides_________________________________
+
+  let splide1;
+  let splide2;
+
+  function createSplide() {
+    splide1 = new Splide("#auto-scroll-slider", {
+      type: "loop",
+      drag: true,
+      arrows: false,
+      pagination: false,
+      fixedWidth: "15rem",
+      gap: "1.5rem",
+      direction: document.documentElement.dir === "rtl" ? "rtl" : "ltr",
+      autoScroll: {
+        speed: 1,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+      },
+      breakpoints: {
+        768: { fixedWidth: "8rem", gap: "0.5rem" },
+      },
+    }).mount(window.splide.Extensions);
+
+    splide2 = new Splide("#auto-scroll-slider-right", {
+      type: "loop",
+      drag: true,
+      arrows: false,
+      pagination: false,
+      fixedWidth: "auto",
+      gap: "1.5rem",
+      updateOnMove: true,
+      swipeThreshold: false,
+      direction: document.documentElement.dir === "rtl" ? "rtl" : "ltr",
+
+      autoScroll: {
+        speed: 1,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+      },
+      breakpoints: {
+        768: { fixedWidth: "auto" },
+      },
+    }).mount(window.splide.Extensions);
+  }
+
+  function destroySplides() {
+    splide1.destroy();
+    splide2.destroy();
+  }
+
+  createSplide();
+
   // ______________________________language_________________________________
 
+  function toggleRTL(lang) {
+    const isRtl = lang === "Ar";
+    if (isRtl) {
+      document.documentElement.setAttribute("dir", "rtl");
+      $(".form_tel").css("text-align", "right");
+    } else {
+      document.documentElement.setAttribute("dir", "ltr");
+      $(".form_tel").css("text-align", "left");
+    }
+
+    destroySplides();
+    createSplide();
+    applyMask();
+  }
+
   $(".language__open").on("click", function (e) {
-    $(this).parent().find(".language__body").slideToggle(400);
+    $(this).parent().find(".language__body").slideToggle(300);
+    $(".language__open").toggleClass("active");
   });
 
   $(".language__body").on("click", function (e) {
     const langEl = e.target.closest(".lang-el");
-    $(".language__open").html(langEl.innerHTML);
-    $(this).slideToggle(400);
+    $(".language__open span").text(langEl.textContent);
+    $(".language__open").removeClass("active");
+    $(this).slideToggle(300);
+
+    toggleRTL(langEl.textContent);
+  });
+
+  // _________________________________________service-toggler___________________________________________
+
+  $(".services-item .plus-toggle").on("click", function () {
+    let parentEl = $(this).closest(".services-item");
+
+    if (parentEl.hasClass("active")) {
+      parentEl.removeClass("active");
+      parentEl.find(".services-item__body").slideUp(400);
+      $(this).removeClass("active");
+    } else {
+      $(".services-item__body").slideUp(400);
+      $(".plus-toggle").removeClass("active");
+
+      $(".services-item").removeClass("active");
+      parentEl.addClass("active");
+
+      parentEl.find(".services-item__body").slideDown(400);
+      $(this).addClass("active");
+    }
   });
 
   // ______________________________cards-show__more-btn_________________________________
@@ -95,45 +197,13 @@ $(window).on("load", () => {
     $(this).parent().parent().find(".for__more").show();
   });
 
-  $(".form_tel").inputmask("+\\9\\98 99 999 99 99");
+  // ______________________________input mask_________________________________
 
+  // $(".form_tel").inputmask({
+  //   mask: "+\\9\\98 99 999 99 99",
+  //   rightAlign: document.documentElement.dir === "rtl",
+  // });
   // ______________________________slider_________________________________
-
-  const sliderToLeft = new Splide("#auto-scroll-slider", {
-    type: "loop",
-    drag: true,
-    arrows: false,
-    pagination: false,
-    fixedWidth: "19.9rem",
-    gap: "0.75rem",
-    autoScroll: {
-      speed: 1.5,
-      pauseOnHover: true,
-      pauseOnFocus: true,
-    },
-    breakpoints: {
-      768: { fixedWidth: "11.4rem" },
-    },
-  }).mount(window.splide.Extensions);
-
-  const sliderToRight = new Splide("#auto-scroll-slider-right", {
-    type: "loop",
-    drag: true,
-    arrows: false,
-    pagination: false,
-    fixedWidth: "19.9rem",
-    gap: "0.75rem",
-    updateOnMove: true,
-    swipeThreshold: false,
-    autoScroll: {
-      speed: 1,
-      pauseOnHover: true,
-      pauseOnFocus: true,
-    },
-    breakpoints: {
-      768: { fixedWidth: "11.4rem" },
-    },
-  }).mount(window.splide.Extensions);
 
   new WOW({
     offset: 50,

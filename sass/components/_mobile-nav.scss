@@ -5,11 +5,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-gray);
+  background-color: var(--color-bg);
   display: none;
 
   @media (min-width: 768px) {
     visibility: hidden;
+  }
+
+  .bg-shape {
+    z-index: -1;
+    @include fullImg;
+    @include absCenter;
+    position: absolute;
   }
 
   &__wrapper {
@@ -24,18 +31,6 @@
 
   &__top {
     @include spaced;
-    .language__open {
-      background-color: #506b6f;
-      border-color: var(--color-gray);
-      gap: 0.5rem;
-      img {
-        background-color: var(--color-white);
-      }
-    }
-    .language__body {
-      background-color: #506b6f;
-      border-color: var(--color-gray);
-    }
   }
 
   &__bottom {
@@ -44,14 +39,14 @@
     flex-direction: column;
 
     .btn {
+      padding: 1rem 0;
       width: 100%;
     }
   }
 
   &__close {
-    border: 1px solid #e5e5e5;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
     border-radius: 50%;
     position: relative;
     display: none;
@@ -61,7 +56,7 @@
       height: 100%;
 
       svg {
-        height: 30%;
+        height: 100%;
       }
     }
   }
@@ -71,7 +66,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding: 5rem 0 3.6rem 0;
+    padding: 3.5rem 0 1.5rem 0;
     gap: 0.5rem;
 
     li {
@@ -83,8 +78,10 @@
       display: inline-block;
       width: 100%;
       color: var(--color-white);
-      font-size: 1.2rem;
-      font-weight: 500;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
       @include center;
       justify-content: flex-start;
       transition: all 0.3s;
@@ -100,7 +97,8 @@
         bottom: -0.5rem;
         height: 2px;
         width: 100%;
-        background: linear-gradient(90deg, #fff 0%, #373435 100%);
+        // background: linear-gradient(90deg, #bda179 0%, #171b2a 100%);
+        background: linear-gradient(90deg, #767676 0%, #171b2a 100%);
       }
 
       &.active {

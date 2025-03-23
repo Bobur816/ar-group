@@ -19,6 +19,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
+    <!-- preloader  -->
+    <div class="preloader">
+      <div class="preloader__bg">
+        <img class="preloader__bg-shape" src="./img/pictures/bg-shape.png" alt="bg" />
+        <img class="preloader__logo" src="./img/pictures/preloader-logo.png" alt="logo" />
+      </div>
+      <div class="preloader__proggress">
+        <div class="preloader__proggress-tumb">
+          <img src="./img/icons/preloader-tumb.png" alt="preloader" />
+          <h3><span class="proggress__level">0</span>%</h3>
+        </div>
+      </div>
+    </div>
+
     <!--popup-call-form  -->
     <div class="popup popup-call-form">
       <div class="overlay">
@@ -86,23 +100,13 @@
         <div class="mobile-nav__top">
           <div class="language">
             <button class="language__open">
-              <img class="language__icon" src="img/icons/flag-ru.svg" alt="lang-icon" />
-              Ру
+              <span>Ру</span>
+              <i class="fa-solid fa-chevron-down"></i>
             </button>
-
             <ul class="language__body">
-              <li class="lang-el">
-                <img class="language__icon" src="img/icons/flag-ru.svg" alt="lang-icon" />
-                Uz
-              </li>
-              <li class="lang-el">
-                <img class="language__icon" src="img/icons/flag-ru.svg" alt="lang-icon" />
-                En
-              </li>
-              <li class="lang-el">
-                <img class="language__icon" src="img/icons/flag-ru.svg" alt="lang-icon" />
-                Ру
-              </li>
+              <li class="lang-el">En</li>
+              <li class="lang-el">Ру</li>
+              <li class="lang-el">Ar</li>
             </ul>
           </div>
           <button class="mobile-nav__close">
@@ -122,19 +126,22 @@
         <div class="mobile-nav__bottom">
           <ul class="mobile-nav__list">
             <li>
-              <a class="mobile-nav__list__link" href="about.html">О компании</a>
+              <a class="mobile-nav__list__link" href="about.html">About us</a>
             </li>
             <li>
-              <a class="mobile-nav__list__link" href="services.html">Услуги</a>
+              <a class="mobile-nav__list__link" href="projects.html">Projects</a>
             </li>
             <li>
-              <a class="mobile-nav__list__link" href="projects.html">Проекты</a>
+              <a class="mobile-nav__list__link" href="services.html">Services</a>
             </li>
             <li>
-              <a class="mobile-nav__list__link" href="#partners">Партнеры </a>
+              <a class="mobile-nav__list__link" href="news.html">News</a>
             </li>
             <li>
-              <a class="mobile-nav__list__link" href="#contacts">Контакты</a>
+              <a class="mobile-nav__list__link" href="#partners">Partners</a>
+            </li>
+            <li>
+              <a class="mobile-nav__list__link" href="#footer">Contacts</a>
             </li>
           </ul>
           <button class="call-form__open btn btn_primary">
@@ -170,41 +177,35 @@
           </a>
           <ul class="header__navigation">
             <li>
-              <a class="header__navigation__link" href="about.html">О компании</a>
+              <a class="header__navigation__link" href="about.html">About us</a>
             </li>
             <li>
-              <a class="header__navigation__link" href="services.html">Услуги</a>
+              <a class="header__navigation__link" href="projects.html">Project</a>
             </li>
             <li>
-              <a class="header__navigation__link" href="projects.html">Проекты</a>
+              <a class="header__navigation__link" href="services.html">Services</a>
             </li>
             <li>
-              <a class="header__navigation__link" href="#partners">Партнеры</a>
+              <a class="header__navigation__link" href="news.html">News</a>
             </li>
             <li>
-              <a class="header__navigation__link" href="#contacts">Контакты</a>
+              <a class="header__navigation__link" href="#partners">Partners</a>
+            </li>
+            <li>
+              <a class="header__navigation__link" href="#footer">Contacts</a>
             </li>
           </ul>
           <div class="header__actions">
             <div class="language">
               <button class="language__open">
-                <img class="language__icon" src="img/icons/flag-ru.svg" alt="lang-icon" />
-                Ру
+                <span>Ру</span>
+                <i class="fa-solid fa-chevron-down"></i>
               </button>
 
               <ul class="language__body">
-                <li class="lang-el">
-                  <img class="language__icon" src="img/icons/flag-ru.svg" alt="lang-icon" />
-                  Uz
-                </li>
-                <li class="lang-el">
-                  <img class="language__icon" src="img/icons/flag-ru.svg" alt="lang-icon" />
-                  En
-                </li>
-                <li class="lang-el">
-                  <img class="language__icon" src="img/icons/flag-ru.svg" alt="lang-icon" />
-                  Ру
-                </li>
+                <li class="lang-el">En</li>
+                <li class="lang-el">Ру</li>
+                <li class="lang-el">Ar</li>
               </ul>
             </div>
             <button class="call-form__open">
@@ -212,7 +213,17 @@
               <span>+998 20 011 11 11</span>
             </button>
           </div>
-          <div class="header__mobile__btns">
+          <button class="mobile-nav__open header__mobile__btn">
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12" fill="auto">
+                <rect width="22" height="2" rx="1" fill="inherit" />
+                <rect y="5" width="22" height="2" rx="1" fill="inherit" />
+                <rect y="10" width="22" height="2" rx="1" fill="inherit" />
+              </svg>
+            </span>
+          </button>
+
+          <!-- <div class="header__mobile__btns">
             <button class="mobile-nav__open header__mobile__btn">
               <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12" fill="auto">
@@ -232,20 +243,59 @@
                 </svg>
               </span>
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
+      <!-- <img clasa src="./img/pictures/bg-shape.png" alt="bg" /> -->
     </header>
 
+    <img class="bg-shape" src="./img/pictures/bg-shape.png" alt="bg" />
     <!-- wow fadeInUp" data-wow-delay=".1s -->
 
     <!-- MAIN   -->
     <main>
       <section class="head">
         <div class="container">
-          <div class="head__wrapper">
-            <div class="head-img">
-              <div class="swiper carousel__head"></div>
+          <div class="head__wrapper wow fadeInUp" data-wow-delay=".1s">
+            <h1 class="big-text">AR Group</h1>
+            <div class="head__carousel">
+              <div class="swiper carousel__head">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide head__carousel-item">
+                    <div class="head__carousel-item__info">
+                      <div class="head__carousel-item__info-buttons">
+                        <a href="#" class="btn_primary">More</a>
+                        <a href="#" class="btn_primary">Contacts</a>
+                      </div>
+                    </div>
+                    <div class="head__carousel-item__image">
+                      <img src="./img/pictures/head-carousel-img-1.png" alt="head-image" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide head__carousel-item">
+                    <div class="head__carousel-item__info">
+                      <div class="head__carousel-item__info-buttons">
+                        <a href="#" class="btn_primary">More</a>
+                        <a href="#" class="btn_primary">Contacts</a>
+                      </div>
+                    </div>
+                    <div class="head__carousel-item__image">
+                      <img src="./img/pictures/head-carousel-img-1.png" alt="head-image" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide head__carousel-item">
+                    <div class="head__carousel-item__info">
+                      <div class="head__carousel-item__info-buttons">
+                        <a href="#" class="btn_primary">More</a>
+                        <a href="#" class="btn_primary">Contacts</a>
+                      </div>
+                    </div>
+                    <div class="head__carousel-item__image">
+                      <img src="./img/pictures/head-carousel-img-1.png" alt="head-image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -253,269 +303,34 @@
 
       <section class="about-us">
         <div class="container">
-          <div class="about-us__wrapper">
+          <div class="about-us__wrapper grid-2-3 wow fadeInUp" data-wow-delay=".2s">
             <div class="about-us__left wow fadeInUp" data-wow-delay=".1s">
-              <h5 class="section__title">О КОМПАНИИ</h5>
-              <h2 class="section__title_big">
-                Пресс-формы от <span>GIBCO</span> – гарантия <span>качества и точности</span>
-              </h2>
+              <a href="about.html" class="btn btn_shapable">About us</a>
             </div>
             <div class="about-us__right wow fadeInUp" data-wow-delay=".2s">
-              <div class="section-shapes">
-                <span class="shape shape-gray"
-                  ><p>
-                    350+ <br />
-                    проектов
-                  </p></span
-                >
-                <span class="shape shape-image">
-                  <img src="./img/pictures/shape-image-1.png" alt="shape-img" />
-                </span>
-                <span class="shape shape-red"></span>
-              </div>
+              <h2 class="section__title">Lorem ipsum</h2>
               <p>
-                Компания GIBCO является ведущим производителем пресс-форм для создания сложных и уникальных изделий.
-                Наши пресс-формы отличаются высокой точностью, долговечностью и адаптивностью под любые производственные
-                задачи.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
               </p>
+              <a href="#" class="btn btn_primary">More</a>
             </div>
           </div>
-
-          <div class="about-us__carousel">
-            <div class="swiper carousel__about-us wow fadeInUp" data-wow-delay=".1s">
-              <div class="swiper-wrapper">
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="about-us-card">
-                    <div class="about-us-card__icon">
-                      <img src="./img/icons/folders-shelf.svg" alt="about-us-icon" />
-                    </div>
-                    <div class="about-us-card__info">
-                      <h4>Lorem ipsum</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="about-us-card">
-                    <div class="about-us-card__icon">
-                      <img src="./img/icons/folders-shelf.svg" alt="about-us-icon" />
-                    </div>
-                    <div class="about-us-card__info">
-                      <h4>Lorem ipsum</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="about-us-card">
-                    <div class="about-us-card__icon">
-                      <img src="./img/icons/folders-shelf.svg" alt="about-us-icon" />
-                    </div>
-                    <div class="about-us-card__info">
-                      <h4>Lorem ipsum</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="about-us-card">
-                    <div class="about-us-card__icon">
-                      <img src="./img/icons/folders-shelf.svg" alt="about-us-icon" />
-                    </div>
-                    <div class="about-us-card__info">
-                      <h4>Lorem ipsum</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="about-us-card">
-                    <div class="about-us-card__icon">
-                      <img src="./img/icons/folders-shelf.svg" alt="about-us-icon" />
-                    </div>
-                    <div class="about-us-card__info">
-                      <h4>Lorem ipsum</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                      </p>
-                    </div>
-                  </div>
-                </a>
+          <div class="about-us__wrapper-images grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="about-us__left wow fadeInUp" data-wow-delay=".1s">
+              <div class="mini-image video hoverable">
+                <video src="./img/videos/about-mini-picture.mp4" muted autoplay loop></video>
               </div>
-              <div class="carousel__controls">
-                <button class="services__carousel-prev btn_line-carousel">
-                  <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="services__carousel-next btn_line-carousel">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
+              <div class="mini-image image hoverable">
+                <img src="./img/pictures/about-mini-img.png" alt="about-image" />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="products">
-        <div class="container">
-          <div class="products__head">
-            <div class="products__head-left">
-              <h2 class="section__title_big">Точность и детализация сложных изделий.</h2>
-            </div>
-            <div class="products__head-right">
-              <div class="section-shapes">
-                <span class="shape shape-gray"
-                  ><p>
-                    350+ <br />
-                    проектов
-                  </p></span
-                >
-                <span class="shape shape-image">
-                  <img src="./img/pictures/shape-image-1.png" alt="shape-img" />
-                </span>
-                <span class="shape shape-red"></span>
-              </div>
-              <p>
-                Мы предлагаем полный цикл услуг: от проектирования и производства до обслуживания пресс-форм. Доверьте
-                ваш проект профессионалам GIBCO!
-              </p>
-            </div>
-          </div>
-
-          <div class="products__wrapper">
-            <div class="products__wrapper-statistic wow fadeInUp" data-wow-delay=".1s">
-              <div class="products__item">
-                <img class="products__item-icon" src="./img/pictures/product-icon-1.svg" alt="icon" />
-                <div class="products__item-text">
-                  <h2>575.000</h2>
-                  <p>Lorem ipsum</p>
-                </div>
-              </div>
-              <div class="products__item">
-                <img class="products__item-icon" src="./img/pictures/product-icon-1.svg" alt="icon" />
-                <div class="products__item-text">
-                  <h2>2021</h2>
-                  <p>Lorem ipsum</p>
-                </div>
-              </div>
-              <div class="products__item">
-                <img class="products__item-icon" src="./img/pictures/product-icon-1.svg" alt="icon" />
-                <div class="products__item-text">
-                  <h2>5.556</h2>
-                  <p>Lorem ipsum</p>
-                </div>
-              </div>
-              <div class="products__item">
-                <img class="products__item-icon" src="./img/pictures/product-icon-1.svg" alt="icon" />
-                <div class="products__item-text">
-                  <h2>350</h2>
-                  <p>Lorem ipsum</p>
-                </div>
-              </div>
-              <button class="btn btn_primary">Подробнее</button>
-            </div>
-            <div class="products__wrapper-img hoverable wow fadeInUp" data-wow-delay=".2s">
-              <img src="img/pictures/product-img.png" alt="product-img" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="services">
-        <div class="container">
-          <h5 class="section__title wow fadeInUp" data-wow-delay=".1s">Услуги</h5>
-          <h2 class="section__title_big wow fadeInUp" data-wow-delay=".2s">
-            Пресс-формы от <span>GIBCO</span> – гарантия <span>качества и точности</span>
-          </h2>
-          <div class="cards__wrapper_3 wow fadeInUp" data-wow-delay=".2s">
-            <div class="services-card">
-              <div class="services-card__img hoverable">
-                <img src="./img/pictures/services-card-img.png" alt="services-card-img" />
-              </div>
-              <div class="services-card__info">
-                <h3>Lorem ipsum</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
-                <a href="services-single.html" class="btn btn_primary text-center">Подробнее</a>
-              </div>
-            </div>
-            <div class="services-card">
-              <div class="services-card__img hoverable">
-                <img src="./img/pictures/services-card-img.png" alt="services-card-img" />
-              </div>
-              <div class="services-card__info">
-                <h3>Lorem ipsum</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
-                <a href="services-single.html" class="btn btn_primary text-center">Подробнее</a>
-              </div>
-            </div>
-            <div class="services-card">
-              <div class="services-card__img hoverable">
-                <img src="./img/pictures/services-card-img.png" alt="services-card-img" />
-              </div>
-              <div class="services-card__info">
-                <h3>Lorem ipsum</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
-                <a href="services-single.html" class="btn btn_primary text-center">Подробнее</a>
-              </div>
-            </div>
-            <div class="services-card">
-              <div class="services-card__img hoverable">
-                <img src="./img/pictures/services-card-img.png" alt="services-card-img" />
-              </div>
-              <div class="services-card__info">
-                <h3>Lorem ipsum</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
-                <a href="services-single.html" class="btn btn_primary text-center">Подробнее</a>
-              </div>
-            </div>
-            <div class="services-card">
-              <div class="services-card__img hoverable">
-                <img src="./img/pictures/services-card-img.png" alt="services-card-img" />
-              </div>
-              <div class="services-card__info">
-                <h3>Lorem ipsum</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
-                <a href="services-single.html" class="btn btn_primary text-center">Подробнее</a>
-              </div>
-            </div>
-            <div class="services-card">
-              <div class="services-card__img hoverable">
-                <img src="./img/pictures/services-card-img.png" alt="services-card-img" />
-              </div>
-              <div class="services-card__info">
-                <h3>Lorem ipsum</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
-                <a href="services-single.html" class="btn btn_primary text-center">Подробнее</a>
+            <div class="about-us__right wow fadeInUp" data-wow-delay=".2s">
+              <div class="big-image hoverable">
+                <img src="./img/pictures/about-big-img.png" alt="about-img" />
               </div>
             </div>
           </div>
@@ -524,136 +339,444 @@
 
       <section class="projects">
         <div class="container">
-          <div class="projects__wrapper wow fadeInUp" data-wow-delay=".1s">
-            <div class="projects__left wow fadeInUp" data-wow-delay=".1s">
-              <h5 class="section__title">ПРОЕКТЫ</h5>
-              <h2 class="section__title_big">
-                Пресс-формы от <span>GIBCO</span> – гарантия <span>качества и точности</span>
-              </h2>
-              <div class="projects__left-bottom">
-                <div class="section-shapes">
-                  <span class="shape shape-gray"
-                    ><p>
-                      350+ <br />
-                      проектов
-                    </p></span
-                  >
-                  <span class="shape shape-image">
-                    <img src="./img/pictures/shape-image-1.png" alt="shape-img" />
-                  </span>
-                  <span class="shape shape-red"></span>
-                </div>
-                <p>
-                  Мы занимаемся разработкой, планированием, реализацией и успешным завершением различных проектов. Наши
-                  решения ориентированы на качество, точность, эффективность и удовлетворение потребностей клиента.
-                </p>
-              </div>
+          <div class="grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="section__title-box">
+              <h2 class="section__title">Projects</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              </p>
             </div>
-            <div class="about-us__right wow fadeInUp" data-wow-delay=".2s"></div>
           </div>
-
-          <div class="projects__carousel wow fadeInUp" data-wow-delay=".2s">
-            <div class="swiper carousel__projects wow fadeInUp" data-wow-delay=".1s">
-              <div class="swiper-wrapper">
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="projects-card">
-                    <div class="projects-card__image">
-                      <img src="./img/pictures/project-image-1.png" alt="projects-img" />
-                    </div>
-                    <div class="projects-card__info">
-                      <span>2023</span>
-                      <span>2 месяца</span>
-                    </div>
-                  </div>
-                </a>
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="projects-card">
-                    <div class="projects-card__image">
-                      <img src="./img/pictures/project-image-1.png" alt="projects-img" />
-                    </div>
-                    <div class="projects-card__info">
-                      <span>2023</span>
-                      <span>2 месяца</span>
-                    </div>
-                  </div>
-                </a>
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="projects-card">
-                    <div class="projects-card__image">
-                      <img src="./img/pictures/project-image-1.png" alt="projects-img" />
-                    </div>
-                    <div class="projects-card__info">
-                      <span>2023</span>
-                      <span>2 месяца</span>
-                    </div>
-                  </div>
-                </a>
-                <a href="product-single.html" class="swiper-slide">
-                  <div class="projects-card">
-                    <div class="projects-card__image">
-                      <img src="./img/pictures/project-image-1.png" alt="projects-img" />
-                    </div>
-                    <div class="projects-card__info">
-                      <span>2023</span>
-                      <span>2 месяца</span>
-                    </div>
-                  </div>
+          <div class="card grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="card__image hoverable">
+              <img src="./img/pictures/project-image-1.png" alt="image" />
+            </div>
+            <div class="card__info">
+              <div class="card__info_top">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  </p>
+                </div>
+                <a href="project-single.html">
+                  <img src="./img/icons/external-link.svg" alt="link-icon" />
                 </a>
               </div>
+              <div class="card__info_bottom">
+                <p class="card__info_bottom-year">2024</p>
+                <p class="card__info_bottom-number">{01}</p>
+              </div>
             </div>
-            <div class="carousel__controls">
-              <button class="projects__carousel-prev btn_line-carousel">
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <button class="projects__carousel-next btn_line-carousel">
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-              <p>+15 лучших проектов</p>
+          </div>
+          <div class="card grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="card__image hoverable">
+              <!-- <img src="./img/pictures/project-image-1.png" alt="image" /> -->
+              <div class="hoverable">
+                <video src="./img/videos/project-image.mp4" muted loop autoplay></video>
+              </div>
+            </div>
+            <div class="card__info">
+              <div class="card__info_top">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  </p>
+                </div>
+                <a href="project-single.html">
+                  <img src="./img/icons/external-link.svg" alt="link-icon" />
+                </a>
+              </div>
+              <div class="card__info_bottom">
+                <p class="card__info_bottom-year">2024</p>
+                <p class="card__info_bottom-number">{01}</p>
+              </div>
+            </div>
+          </div>
+          <div class="card grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="card__image hoverable">
+              <img src="./img/pictures/project-image-1.png" alt="image" />
+            </div>
+            <div class="card__info">
+              <div class="card__info_top">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  </p>
+                </div>
+                <a href="project-single.html">
+                  <img src="./img/icons/external-link.svg" alt="link-icon" />
+                </a>
+              </div>
+              <div class="card__info_bottom">
+                <p class="card__info_bottom-year">2024</p>
+                <p class="card__info_bottom-number">{01}</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="callback">
+      <section class="services">
         <div class="container">
-          <div class="callback__wrapper wow fadeInUp" data-wow-delay=".1s">
-            <div class="callback__head">
-              <h5 class="section__title">ОСТАВИТЬ ЗАЯВКУ</h5>
-              <h2 class="section__title_big">
-                Пресс-формы от <span>GIBCO</span> – гарантия <span>качества и точности</span>
+          <div class="grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="section__title-box">
+              <h2 class="section__title">Services</h2>
+            </div>
+          </div>
+          <ul class="services__list">
+            <li class="services-item wow fadeInUp" data-wow-delay=".2s">
+              <div class="services-item__head grid-2-3">
+                <h4>/01</h4>
+                <div class="services-item__head-controll">
+                  <span class="services-item__head-name">Lorem ipsum dolor sit </span>
+                  <button class="plus-toggle"></button>
+                </div>
+              </div>
+              <div class="services-item__body">
+                <div class="grid-2-3">
+                  <div class="services-item__body-img hoverable">
+                    <img src="./img/pictures/services-card-img.png" alt="services-img" />
+                  </div>
+                  <div class="services-item__body-info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <a href="service-single.html" class="btn btn_primary">More</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="services-item wow fadeInUp" data-wow-delay=".2s">
+              <div class="services-item__head grid-2-3">
+                <h4>/01</h4>
+                <div class="services-item__head-controll">
+                  <span class="services-item__head-name">Lorem ipsum dolor sit </span>
+                  <button class="plus-toggle"></button>
+                </div>
+              </div>
+              <div class="services-item__body">
+                <div class="grid-2-3">
+                  <div class="services-item__body-img hoverable">
+                    <img src="./img/pictures/services-card-img.png" alt="services-img" />
+                  </div>
+                  <div class="services-item__body-info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <a href="service-single.html" class="btn btn_primary">More</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="services-item wow fadeInUp" data-wow-delay=".2s">
+              <div class="services-item__head grid-2-3">
+                <h4>/01</h4>
+                <div class="services-item__head-controll">
+                  <span class="services-item__head-name">Lorem ipsum dolor sit </span>
+                  <button class="plus-toggle"></button>
+                </div>
+              </div>
+              <div class="services-item__body">
+                <div class="grid-2-3">
+                  <div class="services-item__body-img hoverable">
+                    <img src="./img/pictures/services-card-img.png" alt="services-img" />
+                  </div>
+                  <div class="services-item__body-info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <a href="service-single.html" class="btn btn_primary">More</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="services-item wow fadeInUp" data-wow-delay=".2s">
+              <div class="services-item__head grid-2-3">
+                <h4>/01</h4>
+                <div class="services-item__head-controll">
+                  <span class="services-item__head-name">Lorem ipsum dolor sit </span>
+                  <button class="plus-toggle"></button>
+                </div>
+              </div>
+              <div class="services-item__body">
+                <div class="grid-2-3">
+                  <div class="services-item__body-img hoverable">
+                    <img src="./img/pictures/services-card-img.png" alt="services-img" />
+                  </div>
+                  <div class="services-item__body-info">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <a href="service-single.html" class="btn btn_primary">More</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="hero-text-section">
+        <div class="container">
+          <div class="hero-text wow fadeInUp" data-wow-delay=".1s">
+            <span class="hero-child hero-text-item">A MODERN</span>
+            <span class="hero-child hero-text-image">
+              <img src="./img/pictures/hero-img-1.png" alt="hero-img" />
+            </span>
+            <span class="hero-child hero-text-image">
+              <img src="./img/pictures/hero-img-2.png" alt="hero-img" />
+            </span>
+            <span class="hero-child hero-text-item">ARCHITECTURAL</span>
+            <span class="hero-child hero-text-item">AGENCY FOR</span>
+            <span class="hero-child hero-text-image">
+              <img src="./img/pictures/hero-img-3.png" alt="hero-img" />
+            </span>
+            <span class="hero-child hero-text-image">
+              <img src="./img/pictures/hero-img-4.png" alt="hero-img" />
+            </span>
+            <span class="hero-child hero-text-item">UNIQUE</span>
+            <span class="hero-child hero-text-item"> PROJECTS. </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <div class="grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="section__title-box">
+              <h2 class="section__title">
+                What people <br />
+                say
               </h2>
             </div>
-            <form class="callback__form callback-form">
-              <h3>Хотите узнать подробнее?</h3>
-              <p>Заполните форму и наш менеджер свяжется с вами в течение дня.</p>
-              <input type="text" placeholder="Ваше имя" required />
-              <input type="tel" class="form_tel" placeholder="Номер телефона" required="" inputmode="text" />
-              <span>Нажимая на кнопку «Отправить», вы соглашаетесь с Политикой конфиденциальности.</span>
-              <br />
-              <button class="btn btn_primary">Отправить</button>
-            </form>
-            <div class="callback__socials">
-              <ul class="socials">
-                <li>
-                  <a href="#">
-                    <i class="fa-solid fa-paper-plane"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa-brands fa-youtube"></i>
-                  </a>
-                </li>
-              </ul>
-              <p>
-                также, для быстрого расчета, вы можете <br />
-                связаться с нами в удобном мессенджере
+          </div>
+
+          <div class="testimonials__wrapper">
+            <div class="testimonials__item wow fadeInUp" data-wow-delay=".1s">
+              <p class="testimonials__item__text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
               </p>
+              <div class="testimonials__item__info">
+                <div class="testimonials__item__info_left">
+                  <img src="img/pictures/client-img-1.svg" alt="client-img" />
+                  <div class="client">
+                    <h5>Paula Ramirez</h5>
+                    <ul class="testimonials__item__info_stars">
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <img class="testimonials__item__info_right" src="img/icons/google.svg" alt="client-company-logo" />
+              </div>
+            </div>
+            <div class="testimonials__item wow fadeInUp" data-wow-delay=".2s">
+              <p class="testimonials__item__text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+              </p>
+              <div class="testimonials__item__info">
+                <div class="testimonials__item__info_left">
+                  <img src="img/pictures/client-img-1.svg" alt="client-img" />
+                  <div class="client">
+                    <h5>Paula Ramirez</h5>
+                    <ul class="testimonials__item__info_stars">
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <img class="testimonials__item__info_right" src="img/icons/google.svg" alt="client-company-logo" />
+              </div>
+            </div>
+            <div class="testimonials__item wow fadeInUp" data-wow-delay=".3s">
+              <p class="testimonials__item__text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+              </p>
+              <div class="testimonials__item__info">
+                <div class="testimonials__item__info_left">
+                  <img src="img/pictures/client-img-1.svg" alt="client-img" />
+                  <div class="client">
+                    <h5>Paula Ramirez</h5>
+                    <ul class="testimonials__item__info_stars">
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-star"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <img class="testimonials__item__info_right" src="img/icons/google.svg" alt="client-company-logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="container">
+          <div class="grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="section__title-box">
+              <h2 class="section__title">News</h2>
+            </div>
+          </div>
+          <div class="news__wrapper grid-2-3">
+            <div class="card-holder wow fadeInUp" data-wow-delay=".1s">
+              <a href="news-single.html" class="news-card">
+                <div class="news-card__image hoverable">
+                  <img src="./img/pictures/news-img.png" alt="news-img" />
+                </div>
+                <div class="news-card__info">
+                  <h4>15.01.2025</h4>
+                  <h3>Lorem ipsum dolor sit</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="card-holder wow fadeInUp" data-wow-delay=".2s">
+              <a href="news-single.html" class="news-card">
+                <div class="news-card__image hoverable">
+                  <img src="./img/pictures/news-img.png" alt="news-img" />
+                </div>
+                <div class="news-card__info">
+                  <h4>15.01.2025</h4>
+                  <h3>Lorem ipsum dolor sit</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="card-holder right wow fadeInUp" data-wow-delay=".1s">
+              <a href="news-single.html" class="news-card">
+                <div class="news-card__image hoverable">
+                  <img src="./img/pictures/news-img.png" alt="news-img" />
+                </div>
+                <div class="news-card__info">
+                  <h4>15.01.2025</h4>
+                  <h3>Lorem ipsum dolor sit</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="card-holder right wow fadeInUp" data-wow-delay=".2s">
+              <a href="news-single.html" class="news-card">
+                <div class="news-card__image hoverable">
+                  <img src="./img/pictures/news-img.png" alt="news-img" />
+                </div>
+                <div class="news-card__info">
+                  <h4>15.01.2025</h4>
+                  <h3>Lorem ipsum dolor sit</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="card-holder wow fadeInUp" data-wow-delay=".1s">
+              <a href="news-single.html" class="news-card">
+                <div class="news-card__image hoverable">
+                  <img src="./img/pictures/news-img.png" alt="news-img" />
+                </div>
+                <div class="news-card__info">
+                  <h4>15.01.2025</h4>
+                  <h3>Lorem ipsum dolor sit</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="card-holder wow fadeInUp" data-wow-delay=".2s">
+              <a href="news-single.html" class="news-card">
+                <div class="news-card__image hoverable">
+                  <img src="./img/pictures/news-img.png" alt="news-img" />
+                </div>
+                <div class="news-card__info">
+                  <h4>15.01.2025</h4>
+                  <h3>Lorem ipsum dolor sit</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -661,79 +784,51 @@
 
       <section class="partners" id="partners">
         <div class="container">
-          <div class="partners__wrapper">
-            <div class="partners__left wow fadeInUp" data-wow-delay=".1s">
-              <h5 class="section__title">НАШИ ПАРНТЁРЫ</h5>
-              <h2 class="section__title_big">
-                Пресс-формы от <span>GIBCO</span> – гарантия <span>качества и точности</span>
-              </h2>
-            </div>
-            <div class="partners__right wow fadeInUp" data-wow-delay=".2s">
-              <div class="section-shapes">
-                <span class="shape shape-gray"
-                  ><p>
-                    350+ <br />
-                    проектов
-                  </p></span
-                >
-                <span class="shape shape-image">
-                  <img src="./img/pictures/shape-image-1.png" alt="shape-img" />
-                </span>
-                <span class="shape shape-red"></span>
-              </div>
-              <p>
-                Компания GIBCO является ведущим производителем пресс-форм для создания сложных и уникальных изделий.
-                Наши пресс-формы отличаются высокой точностью, долговечностью и адаптивностью под любые производственные
-                задачи.
-              </p>
+          <div class="grid-2-3 wow fadeInUp" data-wow-delay=".1s">
+            <div class="section__title-box">
+              <h2 class="section__title">Partners</h2>
             </div>
           </div>
         </div>
-        <div class="partners__slider">
+        <div class="partners__slider wow fadeInUp" data-wow-delay=".1s">
           <div class="splide" id="auto-scroll-slider">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <img src="./img/partners/partners-item-1.svg" alt="partner-img" />
+                  <div class="bg">
+                    <img src="./img/pictures/partner-bg.png" alt="bg" />
+                  </div>
+                  <img class="brand" src="./img/partners/partners-item-1.svg" alt="partner-img" />
                 </li>
                 <li class="splide__slide">
-                  <img src="./img/partners/partners-item-2.png" alt="partner-img" />
+                  <div class="bg">
+                    <img src="./img/pictures/partner-bg.png" alt="bg" />
+                  </div>
+                  <img class="brand" src="./img/partners/partners-item-2.png" alt="partner-img" />
                 </li>
                 <li class="splide__slide">
-                  <img src="./img/partners/partners-item-3.svg" alt="partner-img" />
+                  <div class="bg">
+                    <img src="./img/pictures/partner-bg.png" alt="bg" />
+                  </div>
+                  <img class="brand" src="./img/partners/partners-item-3.svg" alt="partner-img" />
                 </li>
                 <li class="splide__slide">
-                  <img src="./img/partners/partners-item-4.svg" alt="partner-img" />
+                  <div class="bg">
+                    <img src="./img/pictures/partner-bg.png" alt="bg" />
+                  </div>
+                  <img class="brand" src="./img/partners/partners-item-4.svg" alt="partner-img" />
                 </li>
                 <li class="splide__slide">
-                  <img src="./img/partners/partners-item-5.svg" alt="partner-img" />
+                  <div class="bg">
+                    <img src="./img/pictures/partner-bg.png" alt="bg" />
+                  </div>
+                  <img class="brand" src="./img/partners/partners-item-5.svg" alt="partner-img" />
                 </li>
                 <li class="splide__slide">
-                  <img src="./img/partners/partners-item-6.png" alt="partner-img" />
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="splide" id="auto-scroll-slider-right">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                  <img src="./img/partners/partners-item-1.svg" alt="partner-img" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./img/partners/partners-item-2.png" alt="partner-img" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./img/partners/partners-item-3.svg" alt="partner-img" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./img/partners/partners-item-4.svg" alt="partner-img" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./img/partners/partners-item-5.svg" alt="partner-img" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./img/partners/partners-item-6.png" alt="partner-img" />
+                  <div class="bg">
+                    <img src="./img/pictures/partner-bg.png" alt="bg" />
+                  </div>
+                  <img class="brand" src="./img/partners/partners-item-6.png" alt="partner-img" />
                 </li>
               </ul>
             </div>
@@ -741,31 +836,96 @@
         </div>
       </section>
 
-      <section class="contacts" id="contacts">
+      <section class="callback">
         <div class="container">
-          <div class="contacts__head wow fadeInUp" data-wow-delay=".1s">
-            <div class="contacts__head__left">
-              <h5 class="section__title">КОНТАКТЫ</h5>
-              <h2 class="section__title_big">СВАЖИТЕСЬ С НАМИ <span> УДОБНЫМ СПОСОБОМ</span></h2>
+          <div class="callback__head wow fadeInUp" data-wow-delay=".1s">
+            <div class="text">
+              <h2 class="section__title">Take a step</h2>
+              <h2 class="section__title">to the interior</h2>
+              <h2 class="section__title">of your dreams</h2>
             </div>
-            <p>Компания GIBCO является ведущим производителем пресс-форм для создания сложных и уникальных изделий.</p>
+            <img src="./img/pictures/callback-img.png" alt="callback-img" />
           </div>
-          <div class="contacts__grid wow fadeInUp" data-wow-delay=".1s">
-            <div class="contacts__grid-item">
-              <h3>Адрес производства:</h3>
-              <p>Мирзо-Улугбекский район, Паркентская улица, дом 49а</p>
+          <div class="callback__wrapper grid-2-3">
+            <div class="wow fadeInUp" data-wow-delay=".1s">
+              <img src="./img/pictures/callback-arka.png" alt="callback-img" />
             </div>
-            <div class="contacts__grid-item">
-              <h3>Контакты</h3>
-              <p>Телефон: <span>+998 99 999-99-99</span></p>
-              <p>E-mail: <span>info@gibco.uz</span></p>
+            <div class="wow fadeInUp" data-wow-delay=".2s">
+              <form class="callback__form callback-form">
+                <p>Fill out the form below and our employee will contact you soon</p>
+                <input type="text" placeholder="Full name" required />
+                <input type="tel" class="form_tel" placeholder="Phone number" required="" inputmode="text" />
+
+                <button class="btn btn_primary">Send</button>
+              </form>
             </div>
-            <div class="contacts__grid-item">
-              <h3>Социальные сети</h3>
-              <ul class="socials">
+          </div>
+        </div>
+      </section>
+
+      <section class="tags">
+        <div class="splide tags-list" id="auto-scroll-slider-right">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./img/icons/globus.svg" alt="globus" />
+                <span>architectural</span>
+              </li>
+              <li class="splide__slide">
+                <img src="./img/icons/globus.svg" alt="globus" />
+                <span>Design</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER   -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__wrapper grid-2-3">
+          <div class="footer__left">
+            <img src="./img/logos/Logo.svg" alt="logo" class="foooter__logo" />
+            <div class="footer__left__wrapper">
+              <div class="footer__address">
+                <h4 class="footer__title">Mode of operation:</h4>
+                <p>Monday through Friday 9:00 to 20:00</p>
+                <h4 class="footer__title">Phone</h4>
+                <p>+998 99 999-99-99</p>
+                <h4 class="footer__title">Address:</h4>
+                <p>махаллинский сход граждан Шахрисабз</p>
+                <h4 class="footer__title">E-mail:</h4>
+                <p>info@AR Group.uz</p>
+              </div>
+              <div class="nav-box">
+                <h4 class="footer__title">Company</h4>
+                <ul class="footer__nav">
+                  <li>
+                    <a class="footer__nav__link" href="about.html">About us</a>
+                  </li>
+                  <li>
+                    <a class="footer__nav__link" href="projects.html">Project</a>
+                  </li>
+                  <li>
+                    <a class="footer__nav__link" href="services.html">Services</a>
+                  </li>
+                  <li>
+                    <a class="footer__nav__link" href="news.html">News</a>
+                  </li>
+                  <li>
+                    <a class="footer__nav__link" href="#partners">Partners</a>
+                  </li>
+                  <li>
+                    <a class="footer__nav__link" href="#footer">Contacts</a>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="socials white">
                 <li>
                   <a href="#">
-                    <i class="fa-solid fa-paper-plane"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
@@ -775,103 +935,39 @@
                 </li>
                 <li>
                   <a href="#">
-                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
                   </a>
                 </li>
               </ul>
+              <div class="up-btn">
+                <div class="up">
+                  <span>Upstairs</span>
+                  <a href="#">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="contacts__grid-item hoverable">
-              <img src="./img/pictures/contacts-img.png" alt="contacts-img" />
-            </div>
-            <div class="contacts__grid-item">
-              <form class="callback__form callback-form white">
-                <h3>Хотите узнать подробнее?</h3>
-                <p>Заполните форму и наш менеджер свяжется с вами в течение дня.</p>
-                <input type="text" placeholder="Ваше имя" required />
-                <input type="tel" class="form_tel" placeholder="Номер телефона" required="" inputmode="text" />
-                <span>Нажимая на кнопку «Отправить», вы соглашаетесь с Политикой конфиденциальности.</span>
-                <br />
-                <button class="btn btn_primary">Отправить</button>
-              </form>
+            <div class="footer__bottom">
+              <p>© AR GROUP 2025. All rights reserved</p>
+              <p>created by NOVAS</p>
             </div>
           </div>
-          <div class="contacts__map wow fadeInUp" data-wow-delay=".1s">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d59469.47307289022!2d69.27118497704994!3d41.30700158434967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suz!2s!4v1732682576606!5m2!1suz!2s"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              controls="0"
-              disableDefaultUI="true"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <button class="btn btn_primary contacts__map-btn">Как добраться</button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER   -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer__part">
-            <div class="footer__left-part logo-part">
-              <img class="footer__logo" src="./img/logos/Logo.svg" alt="logo" />
-            </div>
-            <div class="up">
-              <span>Наверх</span>
-              <a href="#">
-                <i class="fa-solid fa-chevron-up"></i>
-              </a>
+          <div class="footer__right">
+            <div class="footer__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d59469.47307289022!2d69.27118497704994!3d41.30700158434967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suz!2s!4v1732682576606!5m2!1suz!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                controls="0"
+                disableDefaultUI="true"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
-          <div class="footer__part">
-            <div class="footer__address">
-              <h4>Карта сайта</h4>
-              <ul class="footer__nav">
-                <li>
-                  <a class="footer__nav__link" href="about.html">О компании</a>
-                </li>
-                <li>
-                  <a class="footer__nav__link" href="services.html">Услуги</a>
-                </li>
-                <li>
-                  <a class="footer__nav__link" href="projects.html">Проекты</a>
-                </li>
-                <li>
-                  <a class="footer__nav__link" href="#partners">Партнеры</a>
-                </li>
-                <li>
-                  <a class="footer__nav__link" href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer__part">
-            <div class="footer__address">
-              <h4>Контакты</h4>
-              <p>
-                Адрес: <br />
-                Мирзо-Улугбекский район, <br />
-                Паркентская улица, дом 49а
-              </p>
-              <p>
-                Телефон: <br />
-                +998 99 999-99-99
-              </p>
-              <p>
-                E-mail: <br />
-                info@gibco.uz
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p>© GIBCO 2025. Все права защищены.</p>
-          <p>created by NOVAS</p>
         </div>
       </div>
     </footer>
@@ -891,7 +987,7 @@
     ></script>
 
     <script src="js/carousels.js"></script>
-    <script src="js/carousel-head.js"></script>
+    <script src="js/preloader.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

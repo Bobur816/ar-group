@@ -1,0 +1,153 @@
+.service {
+  margin-top: 5rem;
+
+  &__part {
+    margin-top: 2rem;
+
+    &-1 {
+      .service__right {
+        grid-column: 2;
+      }
+    }
+
+    &-2 {
+      .shaped-box {
+        &_1 {
+          width: 26.35rem;
+          height: 31.3rem;
+        }
+
+        &_2,
+        &_3 {
+          width: 13.85rem;
+          height: 12.9rem;
+        }
+      }
+
+      .service__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .img-box {
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+    }
+
+    &-3 {
+      .service__right {
+        grid-column: 2;
+      }
+    }
+
+    &-4 {
+      .shaped-box {
+        &_1 {
+          width: 14rem;
+          height: 12.9rem;
+        }
+        &_2 {
+          width: 100%;
+          height: 31.15rem;
+        }
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: flex-end;
+
+    &.first {
+      align-items: flex-start;
+    }
+  }
+
+  &__right {
+    &-texts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 120%; /* 143.75% */
+      }
+    }
+    &-images {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.services-general {
+  margin-top: 5rem;
+}
+@media (max-width: 768px) {
+  .service {
+    margin-top: 3rem;
+
+    &__part {
+      margin-top: 1rem;
+
+      &-1 {
+        .service__right {
+          grid-column: auto;
+        }
+      }
+
+      &-2 {
+        .shaped-box {
+          &_1 {
+            width: 100%;
+            height: fit-content;
+          }
+
+          &_2,
+          &_3 {
+            width: 50%;
+            height: auto;
+            aspect-ratio: 1/1;
+          }
+        }
+
+        .service__right {
+          grid-column: 1;
+          grid-row: 1;
+          gap: 2rem;
+        }
+      }
+
+      &-3 {
+        .service__right {
+          grid-column: auto;
+        }
+      }
+
+      &-4 {
+        .shaped-box {
+          &_1 {
+            display: none;
+          }
+          &_2 {
+            height: fit-content;
+          }
+        }
+      }
+    }
+
+    &__right {
+      &-texts {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+  }
+
+  .services-general {
+    margin-top: 2rem;
+  }
+}

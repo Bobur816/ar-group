@@ -6,15 +6,34 @@
   height: 6.5rem;
   transition: all 0.3s;
   @include center;
-  border-bottom: 1px solid var(--color-primary);
+  background-color: var(--color-bg);
+
+  &.header__single {
+    background-color: transparent;
+  }
+
+  .container {
+    height: 100%;
+  }
   &__wrapper {
     height: 100%; // height: 5.35rem;
     @include spaced;
     position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      @include absCenterX;
+      background-color: var(--color-primary);
+      transition: all 0.2s;
+    }
   }
 
   &__logo {
-    height: 4rem;
+    height: 2.6rem;
     transition: all 0.3s;
     img {
       height: 100%;
@@ -32,6 +51,7 @@
       font-weight: 400;
       line-height: 101%; /* 16.16px */
       transition: all 0.3s;
+      color: var(--color-white);
 
       &:hover,
       &.active {
@@ -46,84 +66,59 @@
 
     .call-form__open {
       height: 2.5rem;
-      padding: 0 1rem;
       font-size: 0.9rem;
-      background-color: var(--color-gray);
       color: var(--color-white);
-      border-radius: 2.5rem;
 
       img {
-        // width: 1.5rem;
         height: 60%;
         margin-right: 0.5rem;
       }
     }
   }
 
-  &__mobile {
-    &__btns {
-      height: 100%;
-      width: 100%;
-      @include spaced;
-      display: none;
-    }
-    &__btn {
-      background-color: var(--color-gray);
-      height: 2.5rem;
-      width: 2.5rem;
-      border-radius: 50%;
-      @include center;
-
-      .icon {
-        max-width: 60%;
-        @include center;
-        svg {
-          max-width: 90%;
-          transition: all 0.3s;
-          fill: var(--color-white);
-        }
-      }
-
-      &:hover {
-        background-color: var(--color-primary);
-
-        & .icon svg {
-          fill: var(--color-white);
-        }
-      }
+  &__mobile__btn {
+    height: 20px;
+    width: fit-content;
+    display: none;
+    svg {
+      fill: var(--color-primary);
     }
   }
 
   &.header__scrolled {
     height: 4.5rem;
-    background-color: var(--color-white);
-    box-shadow: 0 -50px 70px 10px var(--color-gray);
+    box-shadow: 0 -50px 50px 30px #000;
     margin-top: 0;
+
+    &.header__single {
+      background-color: var(--color-bg);
+    }
+
+    .header__wrapper {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        width: 100vw;
+        @include absCenterX;
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    // height: 6rem;
-    margin-top: 0;
-
     &__actions {
       display: none;
-    }
-
-    &__logo {
-      position: absolute;
-      @include absCenter;
     }
 
     &__navigation {
       display: none;
     }
 
-    &__mobile {
-      &__btns {
-        display: flex;
-      }
+    &__mobile__btn {
+      display: flex;
     }
   }
 }

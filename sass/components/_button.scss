@@ -1,16 +1,65 @@
 .btn {
-  border-radius: 2.5rem;
   transition: all 0.3s;
   padding: 0.75rem 3rem;
+  display: inline-block;
+  text-align: center;
   &_primary {
     font-family: Gilroy;
     background-color: var(--color-primary);
     color: var(--color-white);
     border: 1px solid var(--color-primary);
-
+    transition: all 0.3s ease;
+    outline: none;
     &:hover {
       background-color: transparent;
       color: var(--color-primary);
+    }
+  }
+
+  &_shapable {
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    position: relative;
+    border-top: 1px solid var(--color-gray);
+    border-right: 1px solid var(--color-gray);
+    border-bottom: 1px solid var(--color-gray);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.5rem;
+      width: 0.5rem;
+      background-color: var(--color-primary);
+    }
+
+    &::before {
+      top: -0.25rem;
+      left: -0.25rem;
+    }
+
+    &::after {
+      bottom: -0.25rem;
+      left: -0.25rem;
+    }
+  }
+
+  &_line-carousel {
+    height: 5rem;
+    width: 5rem;
+
+    border: 1px solid var(--color-primary);
+
+    i {
+      color: var(--color-primary);
+    }
+
+    &:hover {
+      background-color: var(--color-primary);
+
+      i {
+        color: var(--color-white);
+      }
     }
   }
 
@@ -24,57 +73,49 @@
       color: var(--color-white);
     }
   }
-
-  &_line-carousel {
-    border-radius: 50%;
-    border: 1px solid var(--color-primary);
-
-    i {
-      color: var(--color-primary);
-    }
-
-    &:hover {
-      background-color: var(--color-primary);
-
-      i {
-        color: var(--color-white);
-      }
-    }
-  }
 }
 
-.btn_head {
-  width: 12.75rem;
-  padding: 0.4rem;
-  padding-left: 2rem;
-  border-radius: 2.5rem;
-  background-color: var(--color-primary);
-  @include spaced;
-  span {
-    background-color: var(--color-white);
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    @include center;
-    transition: all 0.3s;
+// .btn_head {
+//   width: 12.75rem;
+//   padding: 0.4rem;
+//   padding-left: 2rem;
+//   border-radius: 2.5rem;
+//   background-color: var(--color-primary);
+//   @include spaced;
+//   span {
+//     background-color: var(--color-white);
+//     height: 3rem;
+//     width: 3rem;
+//     border-radius: 50%;
+//     @include center;
+//     transition: all 0.3s;
 
-    i {
-      color: var(--color-primary);
-      font-size: 0.8rem;
-      transition: all 0.3s;
-    }
-  }
+//     i {
+//       color: var(--color-primary);
+//       font-size: 0.8rem;
+//       transition: all 0.3s;
+//     }
+//   }
 
-  &:hover {
-    background-color: var(--color-white);
-    color: #000;
-    span {
-      background-color: var(--color-primary);
+//   &:hover {
+//     background-color: var(--color-white);
+//     color: #000;
+//     span {
+//       background-color: var(--color-primary);
 
-      i {
-        color: var(--color-white);
-        font-size: 0.8rem;
-      }
+//       i {
+//         color: var(--color-white);
+//         font-size: 0.8rem;
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 768px) {
+  .btn {
+    &_line-carousel {
+      height: 3rem;
+      width: 3rem;
     }
   }
 }

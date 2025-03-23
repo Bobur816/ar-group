@@ -1,17 +1,195 @@
-//  Gilroy
+//____________________________________Gilroy__________________________________________
 
+/* Thin */
 @font-face {
   font-family: "Gilroy";
-  src: url("../../css/fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
-  font-weight: normal;
+  src: url("../../css/fonts/Gilroy/Gilroy-Thin.ttf") format("truetype");
+  font-weight: 100;
   font-style: normal;
 }
 
-// CenturyGothic
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* UltraLight */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: "Century Gothic";
-  src: url("../../css/fonts/CenturyGothic/CenturyGothic.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-UltraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Black */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Heavy (using weight 950 for Heavy as it's typically heavier than Black) */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-Heavy.ttf") format("truetype");
+  font-weight: 950;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../css/fonts/Gilroy/Gilroy-HeavyItalic.ttf") format("truetype");
+  font-weight: 950;
+  font-style: italic;
+}
+
+//_____________________________________Guton________________________________________________
+
+@font-face {
+  font-family: "Guton";
+  src: url("../../css/fonts/Guton/Guton-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Guton";
+  src: url("../../css/fonts/Guton/Guton-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Guton";
+  src: url("../../css/fonts/Guton/Guton-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Guton";
+  src: url("../../css/fonts/Guton/Guton-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Guton";
+  src: url("../../css/fonts/Guton/Guton-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Guton";
+  src: url("../../css/fonts/Guton/Guton-Black.otf") format("opentype");
+  font-weight: 900;
   font-style: normal;
 }
