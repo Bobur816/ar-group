@@ -1,5 +1,5 @@
 const swup = new Swup({
-  containers: ["#mobile-nav", "#nav", "#swup"], // Endi nav va content birga yuklanadi
+  containers: ["#mobile-nav", "#nav", "#swup", "#footer"], // Endi nav va content birga yuklanadi
 });
 
 // Hamma button, slider yoki boshqa JS kodingni shu function ichiga yoz
