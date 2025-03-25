@@ -2510,6 +2510,7 @@ html[dir=rtl] .popup__form input {
 
 .team {
   margin-top: 6rem;
+  overflow: hidden;
 }
 .team__wrapper {
   position: relative;

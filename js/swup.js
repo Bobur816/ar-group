@@ -1,4 +1,9 @@
-$(window).on("load", () => {
+const swup = new Swup({
+  containers: ["#mobile-nav", "#nav", "#swup"], // Endi nav va content birga yuklanadi
+});
+
+// Hamma button, slider yoki boshqa JS kodingni shu function ichiga yoz
+function initScripts() {
   // ______________________________header__scroll_________________________________
   let rootFont = parseInt($(":root").css("font-size"));
   let scroll = $(window).scrollTop();
@@ -9,7 +14,6 @@ $(window).on("load", () => {
     let scroll = $(window).scrollTop();
     scroll > rootFont * 2 ? $(".header").addClass("header__scrolled") : $(".header").removeClass("header__scrolled");
   });
-
 
   // ______________________________.mobile__toggler________________________________
 
@@ -198,16 +202,30 @@ $(window).on("load", () => {
     $(this).parent().parent().find(".for__more").show();
   });
 
-  // ______________________________input mask_________________________________
+  const head = new Swiper(".carousel__head", {
+    loop: true,
+    spaceBetween: 20,
+  });
 
-  // $(".form_tel").inputmask({
-  //   mask: "+\\9\\98 99 999 99 99",
-  //   rightAlign: document.documentElement.dir === "rtl",
-  // });
-  // ______________________________slider_________________________________
+  const team = new Swiper(".carousel__team", {
+    spaceBetween: 30,
+    rtlTranslate: false,
+    // drection: "rtl",
+    fadeEffect: {
+      crossFade: true,
+    },
 
-  new WOW({
-    offset: 50,
-    mobile: false,
-  }).init();
+    navigation: {
+      nextEl: ".team__next",
+      prevEl: ".team__prev",
+    },
+  });
+}
+
+// Boshlang‘ich sahifada ham ishlatish uchun chaqiramiz
+initScripts();
+
+// Har safar sahifa o‘zgarganda qayta yuklash uchun
+swup.hooks.on("page:view", () => {
+  initScripts();
 });
